@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debt Avalanche Planner</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <h1>Debt Avalanche Planner</h1>
+
+    <form id="debtForm">
+        <label>Username: <input type="text" id="username" required /></label><br />
+        <label>Monthly Income: <input type="number" id="income" required /></label><br /><br />
+
+        <div id="debtsContainer">
+            <h3>Debts:</h3>
+            <div class="debt">
+                <label>Name: <input type="text" class="debtName" required /></label>
+                <label>Balance: <input type="number" class="debtBalance" required /></label>
+                <label>Interest Rate: <input type="number" class="debtRate" required /></label>
+                <label>Minimum Payment: <input type="number" class="debtMin" required /></label>
+                <hr />
+            </div>
+        </div>
+
+        <button type="button" onclick="addDebt()">Add Another Debt</button><br /><br />
+        <button type="submit">Generate Plan</button>
+    </form>
+
+    <h2>Repayment Plan:</h2>
+    <div id="result"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
